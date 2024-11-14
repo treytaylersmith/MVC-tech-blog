@@ -1,22 +1,22 @@
 <div class="post">
-  <article>
+  <article class=" text-light fw-bold text-center bg-danger bg-gradient p-2 mx-5 my-3 bg-opacity-75 rounded-pill text-white">
     <div>
-      <h2>{{post.title}}</h2>
-      <div>
+      <h2 class="m-2">{{post.title}}</h2>
+      <div class="m-2">
         Posted by {{post.user.username}} on {{format_date post.createdAt}}
       </div>
     </div>
-    <div>
+    <div class="fs-5">
       {{post.body}}
     </div>
   </article>
 
   {{#if post.comments}}
-  <section>
-    <div>
+  <section class=" text-center">
+    <div class="d-flex justify-content-center">
       <h3>Comments</h3>
     </div>
-    <div>
+    <div  class=" d-flex justify-content-center">
       {{#each post.comments as |comment|}}
       {{> comments}}
       {{/each}}
@@ -24,7 +24,7 @@
   </section>
   {{/if}}
 
-  <form id="new-comment-form">
+  <form id="new-comment-form" class="m-5 text-dark fw-bold text-center ">
     <div>
       <h3>Add New Comment</h3>
     </div>
@@ -32,9 +32,9 @@
       <input type="hidden" name="post-id" value="{{post.id}}" />
       <div>
         <label for="comment-body">Comment</label>
-        <textarea name="comment-body"></textarea>
+        <textarea name="comment-body" class="rounded-3 bg-light"></textarea>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" class="btn btn btn-info ">Submit</button>
     </div>
   </form>
 </div>

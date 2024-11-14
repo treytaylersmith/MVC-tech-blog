@@ -1,17 +1,22 @@
-<div class="posts">
+<div class='posts'>
   {{#each posts}}
-  <article>
-    <div>
-      <h2>
-        <a href="/post/{{id}}">{{title}}</a>
-      </h2>
-      <div>
+    <article class="bg-danger bg-gradient p-2 mx-5 my-3 bg-opacity-75 rounded-pill text-white">
+      <div class='d-flex justify-content-center '>
+        <h2 class="m-2">
+          <a href='/post/{{id}}' type= 'button' class = 'text-decoration-none text-white'>{{title}}</a>
+          
+        </h2>
+
+      </div>
+      <div class='d-flex justify-content-center'>
         Posted by {{user.username}} on {{format_date createdAt}}
       </div>
-    </div>
-    <div>
-      {{body}}
-    </div>
-  </article>
+      <div class='d-flex justify-content-center m-2 py-3'>
+        {{body}}
+      
+      </div>
+      <div class="d-flex justify-content-center  "><a href='/post/{{id}}' type= 'button' class = 'btn btn-info '>Comment</a></div>
+     
+    </article>
   {{/each}}
 </div>

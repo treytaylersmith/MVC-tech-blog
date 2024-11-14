@@ -1,7 +1,7 @@
-<div class="posts">
+<div class="posts p-2 mx-5 my-3">
   {{#each posts}}
-  <a href="/dashboard/edit/{{id}}">
-    <span>{{title}}</span>
+  <a href="/dashboard/edit/{{id}}" class="text-light fw-bold text-center bg-danger bg-gradient p-2 mx-5 my-3 bg-opacity-75 rounded-pill text-white text-decoration-none ">
+    <span class="">{{title}}</span>
     <span>{{format_date createdAt}}</span>
   </a>
   {{/each}}
